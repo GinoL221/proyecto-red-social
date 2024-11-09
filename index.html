@@ -5,9 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Proyecto de Red Social</title>
     <link rel="stylesheet" href="/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
-    <h1></h1>
+    <h1>Chirp</h1>
+    <h2>Ver posteos</h2>
+    <button onclick="getData()">Ver Posteos</button>
+
+    <ul id="postList"></ul>
+
+    <h2>¿Qué están pensando?</h2>
+    <form id="postForm" onsubmit="postData()">
+      <label for="title">Título: </label>
+      <input type="text" id="title" required />
+
+      <label for="postBody">Comentario: </label>
+      <textarea type="text" id="postBody" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
 
     <script src="/script.js"></script>
   </body>

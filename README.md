@@ -4,7 +4,7 @@ Este repositorio contiene una versión simplificada de la red social del pajarit
 
 ## Uso
 
-1.  Clone el repositorio haciendo `git clone `
+1.  Clone el repositorio haciendo `git clone https://github.com/GinoL221/proyecto-red-social.git`
 2.  Abra el proyecto en su editor de código
 3.  Haciendo click derecho ejecutar Live Server para abrir el proyecto en el navegador
 
