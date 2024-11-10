@@ -11,6 +11,8 @@ function getData() {
     .catch((error) => console.error("Error al llamar a la API: ", error));
 }
 
+getData();
+
 function renderPostList() {
   const postList = document.getElementById("postList");
   postList.innerHTML = "";
@@ -60,7 +62,7 @@ function postData() {
   })
     .then((res) => res.json())
     .then((data) => {
-      posts.push(data);
+      posts.unshift(data);
       renderPostList();
       postTitleInput.value = "";
       postBodyInput.value = "";
@@ -103,5 +105,19 @@ function updatePost(id) {
     })
     .catch((error) =>
       console.error("Error al querer actualizar el posteo: ", error)
+    );
+}
+
+function deletePost(id) {
+  fetch(`${urlBase}/${id}`, {
+    method: "DELETE",
+  })
+    .then((res) => res.json())
+    .then(() => {
+      posts = posts.filter((post) => post.id != id);
+      renderPostList();
+    })
+    .catch((error) =>
+      console.error("Error al querer eliminar el posteo: ", error)
     );
 }

@@ -15,11 +15,6 @@
 
   <body>
     <h1>Chirp</h1>
-    <h2>Ver posteos</h2>
-    <button onclick="getData()">Ver Posteos</button>
-
-    <ul id="postList"></ul>
-
     <h2>¿Qué están pensando?</h2>
     <form id="postForm" onsubmit="event.preventDefault(); postData()">
       <label for="postTitle">Título: </label>
@@ -30,6 +25,8 @@
 
       <button type="submit">Enviar</button>
     </form>
+
+    <ul id="postList"></ul>
 
     <script src="/script.js"></script>
   </body>
